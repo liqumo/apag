@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* Site Forms CSS Controller */
+
+form {
+	border:1px dotted #333;
+	border-left:20px solid #333;
+	background-color:#FFF;
+}
+form ol {
+	margin:5px;
+	padding:0;
+	list-style-type:none;
+}
+form ol li fieldset {
+	margin:5px;
+	padding:0;
+	border:0px;
+}
+form ol li fieldset label {
+	display:block;
+	font-weight:bold;
+	font-size:0.9em;
+}
+form input {
+	margin:5px;
+	padding:2px;
+	width:250px;
+	border:0px;
+	border:1px solid #333;
+}
+
+form textarea {
+	margin:5px;
+	padding:2px;
+	width:250px;
+	border:0px;
+	border:1px solid #333;
+}
+
+form select {
+	margin:5px;
+	padding:2px;
+	width:255px;
+	border:0px;
+	border:1px solid #333;
+}
+
+form button {
+	margin:5px;
+	padding:0;
+	width:100px;
+	height:35px;
+}
+div.FormNotice {
+	padding:5px;
+	
+	font-weight:bold;
+	font-size:0.8em;
+	color:#FFF;
+	
+	border:1px dotted #333;
+	border-bottom:0px;
+	background-color:#F03;
+}
+div.FormTab a {
+	float:left;
+	margin:0 10px;
+	padding:5px;
+	
+	font-weight:bold;
+	font-size:0.8em;
+	text-decoration:none;
+	color:#333333;
+	
+	border:1px dotted #333;
+	border-top:0px;
+	background-color:#FFF;
+}
+div.FormTab a:hover {
+	background-color:#666666;
+	color:#FFF;
+}
+
+em { 
+	font-size: 120%; 
+	font-style: normal; 
+	color: #C00;
+}
+
+input:focus,
+input.sig:focus,
+textarea:focus,
+select:focus {	
+	background-color:#CFF; 
+	border-color:#0CF;
+}
+
+input:hover,
+input.sig:hover,
+textarea:hover,
+select:hover {	
+	background-color:#CFF; 
+	border-color:#0CF;
+}
+
+div.adminsuccess{
+	width:800px;
+	padding-bottom:20px;
+}
+
+div.adminsuccess ol {
+	list-style-type:none;
+	margin:5px;
+	padding:2px;
+	border:1px solid #333;
+	padding:0px;
+}
+
+div.adminsuccess ol li{
+	padding:5px;
+}
+
+div.adminsuccess ol li {
+	display:block;
+	font-weight:bold;
+	font-size:0.9em;
+}
+
+div.adminsuccess ol li button {
+	margin:5px;
+	padding:0;
+	width:100px;
+	height:35px;
+}
+
+textarea, input {
+	font-family: arial;
+}

@@ -1,0 +1,62 @@
+<?php
+	$ListingID = $secure->Filter($_REQUEST['i'], '-t -n -di');
+    
+	// Grab all current events
+    if($db->ValueExists('directories', "id = '$ListingID'")){
+        $db->Query(str_replace('%id%', $ListingID, $SQLProc['ShowDirectory']));
+        $Listing = $db->Fetch();
+        // Check for logo
+		$Listing->logo = $Listing->logo == 0 ? '../../nologo.png' : $Listing->logo;
+        // Update click for organisation
+        $db->Query(str_replace('%id%', $ListingID, $SQLProc['RecordListingClick']));
+?>
+<div class="directory">
+	<div class="directoryListDetailed">
+        <h1><?php echo $Listing->name; ?></h1>
+        <img src="/image/user/directory/<?php echo $Listing->logo; ?>" alt="<?php echo $Listing->name; ?>" border="0"/>
+        <ul>
+            <li>
+                <span>Country:</span>
+                <?php echo $Listing->country; ?>
+            </li>
+            <li>
+                <span>Industry:</span>
+                <?php echo $Listing->industry; ?>
+            </li>
+            <li>
+                <span>Description:</span>
+                <?php echo $Listing->description; ?>
+            </li>
+            <?php if(!empty($Listing->phone)){ ?>
+            <li>
+                <span>Phone:</span>
+                <?php echo $Listing->phone; ?>
+			</li>
+            <?php } if(!empty($Listing->URL)){ ?>
+            <li>
+                <span>Website:</span>
+                <?php echo $Listing->URL; ?>
+            </li>
+            <?php } if(!empty($Listing->email)){ ?>
+            <li>
+                <span>Email:</span>
+                <?php echo $Listing->email; ?>
+            </li>
+            <?php } ?>
+        </ul>
+	</div>
+</div>
+<?php
+	}else{
+    	?>
+<div>
+	<h1>Listing Not Found</h1>
+	<p>The listing may have been removed or does not exist.</p>
+</div>
+        <?php
+    }
+?>
+<a class="ActionButton" href="/directory" style="margin:20px 0">
+    <img src="/image/button/back.png" alt="Back" border="0"/>
+    <span>Directory Listings</span>
+</a>

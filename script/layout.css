@@ -1,0 +1,384 @@
+@charset "utf-8";
+/* Site Layout CSS Controller */
+
+html, body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background:#96fac9 url(../image/interface/background.png) 0px 0px;
+}
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+p {
+	margin:5px 0;
+	padding:0;
+}
+#head {
+	background:#000 url(../image/interface/TopBackground.png) 0px 0px repeat-x;
+	height:119px;
+	
+	border-bottom:1px solid #FFF;
+}
+#head #innerHead {
+	margin-left:auto;
+	margin-right:auto;
+	width:269px;
+	height:119px;
+	background:url(../image/interface/TopGlow.png) 0px 0px no-repeat;
+}
+#head .TopTab {
+	float:right;
+	display:block;
+	margin:0 10px 0 0;
+	padding:5px;
+	
+	font-size:0.6em;
+	
+	border:2px solid #333;
+	border-top:0px;
+	
+	background-color:#FFF;
+}
+#head .tabs a {
+	font-weight:bold;
+	color:#333;
+	text-decoration:none;
+}
+#head .tabs a:hover {
+	background-color:#666666;
+	color:#FFF;
+}
+
+/*MENU*/
+#menuBg {
+	background-color:#FFF;
+}
+#menu{
+	margin-left:auto;
+	margin-right:auto;
+	width: 800px;
+	overflow: hidden;
+}
+
+#menu ul{
+	margin: 0;
+	padding: 0;
+	padding-left: 10px; 
+	font: bold 14px Verdana;
+	list-style-type: none;
+}
+
+#menu li{
+	display: inline;
+	margin: 0;
+}
+
+#menu li a{
+	float: left;
+	display: block;
+	text-decoration: none;
+	margin: 0;
+	padding: 7px 8px; 
+	/*border-left: 1px solid #000;*/
+	border-right:1px dotted #CCC; 
+	color:#000;
+	background-color: #FFF;
+}
+#menu li a.last {
+	border-right:none;
+}
+
+#menu li a:hover{
+	color:#FFF;
+	background: #0C6;
+}
+
+/* used to make current page link look different through javascript */
+li.current {
+  font-weight: bold;
+  background: #2FB36D;
+}
+
+li.current a{
+  color: #E3E5E4;  
+}
+
+#middle {
+	clear:both;
+	position:relative;
+	background: url(../image/interface/MiddleBlueStretch.png) 0px 0px repeat-x;
+	height:126px;
+	border-top:1px solid #FFF;
+}
+#middle #innerMiddle {
+	background: url(../image/interface/MiddleBlue.png) 0px 0px no-repeat;
+	width:592px;
+	height:126px;
+}
+#middle #innerMiddle img {
+	margin-left:50px;
+}
+#middle #innerMiddle p {
+	position:absolute;
+	top:40px;
+	right:150px;
+	font-weight:bold;
+	font-style:italic;
+	text-align:right;
+	color:#FFF;
+}
+#middle #innerMiddle p span {
+	display:block;
+	font-size:0.8em;
+}
+
+#middleGlow {
+	background:url(../image/interface/MiddleTopGlowMid.png) 0px 0px repeat-x;
+	height:64px;
+	border-top:1px solid #FFF;
+}
+#middleGlow .left {
+	background:url(../image/interface/MiddleTopGlowLeft.png) 0px 0px repeat-x;
+	width:109px;
+	height:64px;
+}
+#middleGlow .right {
+	float:right;
+	background:url(../image/interface/MiddleTopGlowRight.png) 0px 0px repeat-x;
+	width:112px;
+	height:64px;
+}
+
+#content {
+	margin:0;
+	padding:0;
+	background:url(../image/interface/ContentMiddle.png) 0px 0px repeat-x;
+}
+#content #main {
+	margin:0 auto;
+	padding:0px 20px;
+	width:90%;
+}
+
+#footer {
+	clear:both;
+	margin:0 0 30px 0;
+	background:url(../image/interface/BottomRight.png) 0px 0px repeat-x;
+}
+
+#footer #innerFooter {
+	margin-left:auto;
+	margin-right:auto;
+	width:481px;
+	height:68px;
+	background:url(../image/interface/BottomMiddle.png) 0px 0px repeat-x;
+}
+
+h1 {
+	margin:0;
+	padding:0;
+}
+
+table {
+	border-spacing:0px;
+	align:left;
+	valign:top;
+}
+
+td {
+	width:10%;
+}
+
+tr.alt {
+	background:#B5E9D3;
+}
+
+
+button {
+	height:35px;
+}
+
+a.ActionButton {
+	float:left;
+	margin:2px 0 0 2px;
+	padding:4px 5px 0 0;
+	text-decoration:none;
+	border:2px solid #FFF;
+	/*background-color:#333;*/
+	background:#333 url(../image/interface/TopBackground.png) 0 0 repeat-x;
+}
+a.ActionButton:hover {
+	/*background-color:#666;*/
+	background:#333 url(../image/interface/MiddleBlueStretch.png) 0 0 repeat-x;
+}
+a.ActionButton span {
+	position:relative;
+	top:12px;
+	font-size:0.8em;
+	font-weight:bold;
+	color:#FFF;
+}
+a.ActionButton img {
+	float:left;
+}
+
+/*Administration*/
+div#AdminMenu ol {
+	list-style-type:none;
+}
+div#AdminMenu ol li a {
+	width:90%;
+}
+
+/*Directory*/
+div.directoryList {
+	float:left;
+	padding:10px;
+	width:200px;
+                  height:230px;
+                  display: table-cell ;
+                  vertical-align: middle;
+                 
+}
+div.directory img {
+	margin:0 0 0 35px;
+	border:2px solid #333;
+}
+div.directoryListDetailed h1 {
+	clear:both;
+}
+div.directoryListDetailed img {
+	float:left;
+	margin:30px 25px 0 10px;
+}
+div.directoryListDetailed ul {
+	float:left;
+	margin-top:30px;
+	width:600px;
+}
+div.directoryList img:hover {
+	border-color:#0CF;
+}
+div.directoryListDetailed {
+	padding:10px;
+	width:800px;
+}
+div.directory ul {
+	list-style-type:none;
+	padding:0px;
+}
+div.directoryList ul li {
+	font-size:0.9em;
+	text-align:center;
+}
+div.directory span {
+	font-weight: bold; 
+}
+div.directoryListDetailed ul li{
+	padding:5px;
+	font-size:0.9em;
+}
+div.directoryListDetailed span {
+	display:block;
+	font-size:0.9em;
+}
+
+div.AdminDirectoryList {
+	clear:both;
+	margin:20px;
+	padding:0;
+	border:1px solid #333;
+}
+div.AdminDirectoryList h2,
+div.AdminDirectoryList h3 {
+	margin:0;
+	padding:5px;
+	font-size:0.9em;
+	color:#FFF;
+	background-color:#333;
+}
+div.AdminDirectoryList h3 {
+	padding:2px;
+	font-size:0.6em;
+	text-align:right;
+}
+div.AdminDirectoryList ul li img {
+	margin:5px;
+}
+div.AdminDirectoryList ul {
+	float:left;
+	margin:0;
+	padding:0;
+	list-style-type:none;	
+}
+div.AdminDirectoryList .description {
+	margin:5px;
+}
+
+div.filter {
+	clear:both;
+	margin:10px 0;
+}
+div.filter h3,
+div.filter ol {
+	margin:0;
+	padding:0;
+}
+div.filter ol li {
+	float:left;
+}
+div.filter button {
+	margin:13px 0 0 20px;
+}
+
+/*Events*/
+div.event {
+	padding-bottom:20px;
+}
+div.event h2 {
+	margin:0;
+	padding:5px;
+	font-size:0.9em;
+	color:#FFF;
+	background-color:#333;
+}
+
+div.event ul {
+	list-style-type:none;
+	margin:0px;
+	padding:2px;
+	border:1px solid #333;
+	padding:0px;
+}
+
+div.event ul li{
+	padding:5px;
+}
+
+div.heading {
+	display:block;
+	font-weight:bold;
+	font-size:0.9em;
+	background: #000;
+	color:#fff;
+	padding:5px;
+}
+
+div.filter h2 {
+	margin:0;
+	padding:5px;
+	font-size:0.9em;
+	color:#FFF;
+	background-color:#333;
+}
+
+div.quote {
+	float: left;
+}
+
+div.innerMiddle {
+	float: right;
+}

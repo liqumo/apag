@@ -1,0 +1,30 @@
+<div>
+	<h1>Administration Login</h1>
+	<p>You must be an authorised user to access this area.</p>
+    <?php echo $LoginMessage; ?>
+	<form id="login" action="/admin/?t=1" method="post">
+    	<ol>
+            <li>
+                <fieldset>
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" title="Enter your username" />
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" title="Enter your password" />
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <button id="submit" name="submit" type="submit" value="Login">Login</button>
+                    <button id="reset" name="reset" type="reset" value="Clear">Clear</button>
+                </fieldset>
+            </li>
+        </ol>
+	</form>
+    <div class="FormTab">
+    	<a href="/home">&laquo; Homepage</a>
+	</div>
+</div>
